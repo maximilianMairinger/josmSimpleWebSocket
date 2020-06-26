@@ -1,0 +1,39 @@
+{
+  "name": "josm-simple-web-socket",
+  "version": "0.0.1",
+  "description": "Simple client side socket for josm.",
+  "main": "app/dist/josmSimpleWebSocket.js",
+  "types": "app/dist/josmSimpleWebSocket.d.ts",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.prod.json",
+    "dev": "webpack --config webpack.dev.config.js",
+    "deploy": "npm run build && npm publish",
+    "test": "node ./test/dist/test-bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximilianMairinger/josmSimpleWebSocket.git"
+  },
+  "keywords": keywordsAsJSON,
+  "author": "Maximilian Mairinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximilianMairinger/josmSimpleWebSocket/issues"
+  },
+  "homepage": "https://github.com/maximilianMairinger/josmSimpleWebSocket#readme",
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "postcss-loader": "^3.0.0",
+    "terser-webpack-plugin": "^2.3.6",
+    "to-string-loader": "^1.1.6",
+    "ts-loader": "^7.0.2",
+    "typescript": "^3.8.3",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-inject-plugin": "^1.5.4",
+    "webpack-merge": "^4.2.2"
+  }
+}
