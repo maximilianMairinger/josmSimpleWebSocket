@@ -19,9 +19,6 @@ export default function(data_identifier?: Dat | string, url?: string, externalCh
     let mainFunc = {
       data(data: any) {
         sub.active(false);
-        //@ts-ignore
-        window.externalChangeListenerSub = externalChangeListenerSub
-        // debugger
         externalChangeListenerSub.active(true, false);
         (dat as Data).set(data);
         externalChangeListenerSub.active(false);
