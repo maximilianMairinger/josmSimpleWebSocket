@@ -1,4 +1,13 @@
 import josmSimpleWebSocket from "./../../app/src/josmSimpleWebSocket"
-//const testElem = document.querySelector("#test")
+import { Data } from "josm"
 
-josmSimpleWebSocket()
+
+(async () => {
+  let data = await josmSimpleWebSocket("testClient", "127.0.0.1:8080", console.log) as Data
+
+  //@ts-ignore
+  window.send = (msg) => {
+    data.set(msg)
+  }
+})()
+
