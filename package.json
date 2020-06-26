@@ -14,7 +14,9 @@
     "type": "git",
     "url": "git+https://github.com/maximilianMairinger/josmSimpleWebSocket.git"
   },
-  "keywords": keywordsAsJSON,
+  "keywords": [
+    "josm", "simple", "web", "socket"
+  ],
   "author": "Maximilian Mairinger",
   "license": "ISC",
   "bugs": {
